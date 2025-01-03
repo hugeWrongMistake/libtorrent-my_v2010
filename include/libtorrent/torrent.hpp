@@ -779,7 +779,7 @@ namespace libtorrent {
 		void post_download_queue();
 
 		void update_auto_sequential();
-	private:
+	public:
 		void remove_connection(peer_connection const* p);
 	public:
 // --------------------------------------------
@@ -891,7 +891,7 @@ namespace libtorrent {
 		}
 #endif // TORRENT_DISABLE_PREDICTIVE_PIECES
 
-	private:
+	public:
 
 		// called when we learn that we have a piece
 		// only once per piece
@@ -1280,7 +1280,7 @@ namespace libtorrent {
 
 		static constexpr int no_gauge_state = 0xf;
 
-	private:
+	public:
 
 		void on_exception(std::exception const& e);
 		void on_error(error_code const& ec);
@@ -1500,7 +1500,7 @@ namespace libtorrent {
 		aux::array<link, aux::session_interface::num_torrent_lists, torrent_list_index_t>
 			m_links;
 
-	private:
+	public:
 
 		// m_num_verified = m_verified.count()
 		std::uint32_t m_num_verified = 0;
